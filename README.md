@@ -4,6 +4,7 @@ PEP Parse - это веб-краулер на основе Scrapy, предна�
 
 ## Структура Проекта
 
+```
 crapy_parser_pep/
 │
 ├── pep_parse/
@@ -13,12 +14,13 @@ crapy_parser_pep/
 │ ├── pipelines.py
 │ ├── settings.py
 │ └── spiders/
-│ ├── init.py
-│ └── pep.py
+│     ├── init.py
+│     └── pep.py
 │
 ├── scrapy.cfg
 ├── requirements.txt
 └── README.md
+```
 
 ## Установка
 
