@@ -16,13 +16,10 @@ def results_dir():
     ]
     return results_dir
 
-
 def test_results_dir_exists(results_dir):
     assert len(results_dir), (
         'Не обнаружена папка /results'
     )
-
-
 def test_csv_files(results_dir):
     csv_files = [
         file for file in results_dir[0].iterdir() if file.glob('*.csv')

@@ -1,6 +1,7 @@
 import csv
 from collections import Counter
 from datetime import datetime as dt
+
 from scrapy.exceptions import DropItem
 
 from pep_parse.settings import BASE_DIR
@@ -16,9 +17,9 @@ class PepParsePipeline:
         self.time = dt.now().strftime(TIME_FORMAT)
 
     def process_item(self, item, spider):
-        self.total[item['status']] += 1
         if 'status' not in item:
             raise DropItem('Status не найден')
+        self.total[item['status']] += 1
         return item
 
     def close_spider(self, spider):
